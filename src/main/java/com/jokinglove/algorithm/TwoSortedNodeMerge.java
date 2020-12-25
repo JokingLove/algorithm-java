@@ -18,10 +18,12 @@ public class TwoSortedNodeMerge {
         SingletonNode<Integer> node3 = node(3);
         SingletonNode<Integer> node4 = node(4);
         SingletonNode<Integer> node5 = node(5);
+        SingletonNode<Integer> node6 = node(6);
 
 
         node0.setNext(node1);
         node1.setNext(node4);
+        node4.setNext(node6);
 
         node2.setNext(node3);
         node3.setNext(node5);

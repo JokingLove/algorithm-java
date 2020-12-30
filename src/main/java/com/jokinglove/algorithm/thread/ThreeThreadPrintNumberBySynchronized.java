@@ -1,7 +1,5 @@
 package com.jokinglove.algorithm.thread;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 /**
  * 三个线程交替打印 0 - 100
  *
@@ -10,7 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class ThreeThreadPrintNumberBySynchronized {
 
-    static volatile AtomicInteger cnt = new AtomicInteger(0);
+    static volatile int cnt = 0;
 
     public static void main(String[] args) {
 
@@ -36,11 +34,11 @@ public class ThreeThreadPrintNumberBySynchronized {
         public void run() {
             while(true) {
                 synchronized (lock) {
-                    if(cnt.get() > 100) {
+                    if(cnt > 100) {
                         break;
                     }
-                    if(cnt.get() % 3 == i) {
-                        System.out.println("线程 " + i + ":" + cnt.getAndIncrement());
+                    if(cnt % 3 == i) {
+                        System.out.println("线程 " + i + ":" + cnt++);
                     }
                 }
             }

@@ -1,4 +1,4 @@
-package com.jokinglove.algorithm;
+package com.jokinglove.algorithm.linkedlist;
 
 import com.jokinglove.algorithm.datastruct.SingletonNode;
 
